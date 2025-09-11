@@ -47,6 +47,7 @@ The application consists of these key components:
 ### Prerequisites
 
 - .NET 9 SDK
+- SQL Server or SQLite for database storage
 
 ### Running the Application
 
@@ -54,6 +55,19 @@ The application consists of these key components:
 2. Navigate to the project directory
 3. Run `dotnet run`
 4. Access the application at `https://localhost:7000` or `http://localhost:5000`
+
+### Database Setup
+
+Before running the application, you need to set up the database:
+
+1. Update the connection string in `appsettings.json` to point to your database
+2. Open a terminal in the project directory
+3. Run the following commands to create and apply migrations:
+
+````````
+> dotnet ef migrations add InitialCreate
+> dotnet ef database update
+```````{
 
 ## Usage
 
