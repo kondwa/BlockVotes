@@ -70,11 +70,14 @@ Before running the application, you need to set up the database:
 ```
 
 ## Usage
-
-- **Viewing the Blockchain**: The home page displays all blocks in the chain with their details
-- **Casting a Vote**: Enter your ID and chosen candidate, then click "Cast Vote"
+- **Create an Account**: Register a new user account to start voting
+- **Login**: Use your credentials to log in
+- **Voting**: Navigate to the voting page to cast your vote
+- **Candidate Selection**: Choose from the list of candidates and submit your vote
 - **Viewing Pending Votes**: Navigate to the Pending page to see votes waiting to be mined
-- **Mining**: Click "Mine Block" to process pending votes into a new block
+- **Close Voting**: Click the "Close Voting" button to mine the pending votes into a new block
+- **Check Blockchain**: View the entire blockchain and verify the integrity of the votes
+- **View Results**: Check the aggregated vote counts for each candidate
 
 ## Educational Purpose
 
@@ -85,4 +88,4 @@ This application is intended as an educational tool to demonstrate blockchain co
 - Proof-of-work consensus
 - Distributed data storage
 
-Note: This is a simplified implementation for demonstration purposes and lacks many features required for a production voting system, such as proper security, distributed consensus, and voter authentication.
+Note: This is a simplified implementation for demonstration purposes and lacks many features required for a production voting system, such as proper security, and distributed consensus.
