@@ -64,10 +64,10 @@ Before running the application, you need to set up the database:
 2. Open a terminal in the project directory
 3. Run the following commands to create and apply migrations:
 
-````````
+```cmd
 > dotnet ef migrations add InitialCreate
 > dotnet ef database update
-```````{
+```
 
 ## Usage
 
