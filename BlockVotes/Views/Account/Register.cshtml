@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+<h2>Register</h2>
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+<div class="card">
+    <form method="post" class="card-body">
+        <input name="firstName" placeholder="First Name" required class="form-control" />
+        <input name="lastName" placeholder="Last Name" required class="form-control" />
+        <input name="email" placeholder="Email" required class="form-control" />
+        <input name="password" type="password" placeholder="Password" required class="form-control" />
+        <button type="submit" class="btn btn-primary mt-1">Register</button>
+        <a asp-action="Login" asp-controller="Account" class="btn btn-secondary mt-1">Login</a>
+
+    </form>
+</div>
+

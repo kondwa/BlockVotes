@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Blockchain Integrity Check";
+    var issues = ViewBag.Issues as List<string>??[];
+    var blocks = ViewBag.Blocks as List<Block>??[];
+    bool isValid = ViewBag.IsValid;
+}
+
+<h2>Blockchain Integrity Check</h2>
+
+@if (isValid)
+{
+    <div class="alert alert-success">
+        ✅ The blockchain is valid. No tampering detected.
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        ❌ The blockchain is INVALID. Tampering has been detected.
+        <ul>
+            
+                @foreach (var issue in issues)
+                {
+                    <li>@issue</li>
+                }
+        </ul>
+    </div>
+}
+
+<h3>Blocks</h3>
+<table class="table">
+    <thead>
+        <tr><th>Index</th><th>Hash</th><th>PreviousHash</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var b in blocks)
+        {
+            <tr>
+                <td>@b.Index</td>
+                <td>@b.Hash</td>
+                <td>@b.PreviousHash</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" asp-controller="Voting">Back to Blockchain</a>
