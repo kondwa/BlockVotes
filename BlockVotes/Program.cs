@@ -1,5 +1,6 @@
 using BlockVotes.Data;
 using BlockVotes.Models;
+using BlockVotes.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
@@ -20,6 +21,8 @@ builder.Services.ConfigureApplicationCookie(options => {
     options.LoginPath = "/Account/Login";
     options.LogoutPath = "/Account/Logout";
 });
+
+builder.Services.AddScoped<BlockchainService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

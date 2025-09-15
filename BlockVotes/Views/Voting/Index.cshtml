@@ -31,12 +31,13 @@
             <tr>
                 <td>@block.Index</td>
                 <td>
-                    <ul>
+                    @block.Votes.Count()
+                    @* <ul>
                         @foreach (var v in block.Votes)
                         {
                             <li>@v.VoterId - @v.Candidate</li>
                         }
-                    </ul>
+                    </ul> *@
                 </td>
                 <td>@block.Hash</td>
                 <td>@block.PreviousHash</td>

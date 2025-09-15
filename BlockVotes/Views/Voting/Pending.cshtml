@@ -17,8 +17,8 @@
         <tr><th>Voter ID</th><th>Candidate</th></tr>
     </thead>
     <tbody>
-        @foreach (var v in Model)
-        {
+        @{
+            var v = Model.FirstOrDefault(v => v.VoterId == User.Identity?.Name && !v.IsCommitted);
             <tr>
                 <td>@v.VoterId</td>
                 <td>@v.Candidate</td>

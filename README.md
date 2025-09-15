@@ -83,7 +83,7 @@ Before running the application, you need to set up the database:
 
 This application is intended as an educational tool to demonstrate blockchain concepts including:
 
-- Immutable ledgers
+- Immutable voting records
 - Cryptographic hashing
 - Proof-of-work consensus
 - Distributed data storage
